@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#dbeafe"/>
+  <rect y="250" width="640" height="110" fill="#86efac"/>
+  <rect x="80" y="110" width="480" height="160" rx="10" fill="#f8fafc" stroke="#166534" stroke-width="6"/>
+  <rect x="110" y="140" width="85" height="75" fill="#bfdbfe" stroke="#166534" stroke-width="5"/>
+  <rect x="230" y="140" width="85" height="75" fill="#bfdbfe" stroke="#166534" stroke-width="5"/>
+  <rect x="350" y="140" width="85" height="75" fill="#bfdbfe" stroke="#166534" stroke-width="5"/>
+  <rect x="470" y="140" width="55" height="130" fill="#14532d"/>
+  <path d="M60 110h520L320 55z" fill="#16a34a"/>
+  <text x="320" y="315" font-family="Arial" font-size="30" font-weight="700" text-anchor="middle" fill="#064e3b">School / Evacuation Center</text>
+</svg>

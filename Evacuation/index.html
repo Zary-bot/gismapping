@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evacuation Center Mapping System</title>
+  <link rel="preconnect" href="https://unpkg.com" />
+  <link rel="preload" as="style" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" onload="this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" /></noscript>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="images/logo.svg" alt="Evacuation mapping logo" />
+      <div>
+        <h1>EVACUATION CENTER MAPPING SYSTEM</h1>
+        <p>Interactive GIS-Based Mapping Application</p>
+      </div>
+    </div>
+    <nav aria-label="Main navigation">
+      <a href="#">Home</a>
+      <a href="#mapSection">Map</a>
+      <a href="#aboutPanel">About</a>
+      <a href="#contactPanel">Contact</a>
+    </nav>
+  </header>
+
+  <main class="page-grid">
+    <aside class="sidebar left-panel" aria-label="Map controls">
+      <section class="panel-block">
+        <h2>Search Location</h2>
+        <div class="search-box">
+          <input id="searchInput" type="search" placeholder="Search location..." autocomplete="off" />
+          <button id="clearSearch" type="button" aria-label="Clear search">×</button>
+          <button id="searchButton" type="button" aria-label="Search location">⌕</button>
+        </div>
+        <div id="searchResults" class="search-results" aria-live="polite"></div>
+      </section>
+
+      <section class="panel-block">
+        <h2>Layers</h2>
+        <label class="checkline main-check"><input id="allLayers" type="checkbox" checked /> <span>All Layers</span></label>
+        <div id="layerList" class="layer-list"></div>
+      </section>
+
+      <section class="panel-block">
+        <h2>Legend</h2>
+        <div id="legend" class="legend"></div>
+      </section>
+    </aside>
+
+    <section class="map-column" id="mapSection">
+      <div id="map" class="map-canvas" aria-label="Interactive map of evacuation centers"></div>
+    </section>
+
+    <aside class="sidebar right-panel" aria-label="Map information">
+      <section class="profile-card" id="aboutPanel">
+        <div class="info-icon">i</div>
+        <h2>Map Information</h2>
+        <p>This interactive map uses the QGIS BaseMap.qgz OpenStreetMap source as the Leaflet basemap. It shows evacuation centers and related facilities around Tunga. Use search, layer control, zoom, and marker popups to explore each location.</p>
+      </section>
+
+      <section class="panel-block" id="locationDetails">
+        <h2>Selected Location</h2>
+        <p>Click a marker on the map or choose a search result to view location name, description, image, type, capacity, and contact details.</p>
+      </section>
+
+      <section class="panel-block feature-list" id="contactPanel">
+        <h2>Features</h2>
+        <ul>
+          <li><strong>Interactive Map</strong><span>Pan, zoom, and explore the map.</span></li>
+          <li><strong>Search Location</strong><span>Type a place name, press Enter, or click the search button to zoom to a location.</span></li>
+          <li><strong>Layer Control</strong><span>Show or hide evacuation centers, halls, schools, and courts.</span></li>
+          <li><strong>Marker Popups</strong><span>Open detailed information cards.</span></li>
+          <li><strong>Legend</strong><span>Identify symbols and colors.</span></li>
+          <li><strong>Responsive Design</strong><span>Works on desktop and mobile screens.</span></li>
+        </ul>
+      </section>
+    </aside>
+  </main>
+
+  <footer>
+    <span>Evacuation Center Mapping System</span>
+    <span>Built with Leaflet | HTML | CSS | JavaScript | GeoJSON</span>
+  </footer>
+
+  <script async src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
